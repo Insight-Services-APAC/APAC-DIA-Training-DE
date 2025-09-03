@@ -145,10 +145,10 @@ cython_debug/
 *.code-workspace
 
 # Data files (assessment specific)
-#data_raw/
-#lake/
-#duckdb/
-#analytics/*.pbix
+data_raw/
+lake/
+duckdb/
+analytics/*.pbix
 *.duckdb
 *.duckdb.wal
 
@@ -166,24 +166,3 @@ logs/
 # Testing
 test_output/
 test_data/
-
-
-# Exclude large datasets but keep samples
-data_raw/*
-!data_raw/README.md
-!data_raw/samples/
-
-# Exclude full lake but keep structure and samples  
-lake/bronze/parquet/*
-lake/bronze/delta/*
-!lake/bronze/parquet/.gitkeep
-!lake/bronze/delta/.gitkeep
-!lake/bronze/parquet/customers/sample_*.parquet
-!lake/bronze/delta/customers/sample_*.parquet
-
-# Include your DuckDB database (if reasonable size)
-# Comment out: *.duckdb
-# Or include only if < 50MB
-
-# Include your Power BI file
-# Comment out: analytics/*.pbix
